@@ -46,7 +46,7 @@ public void mouseClicked() {
   c = color((int)(Math.random()*100+155), (int)(Math.random()*100+155), (int)(Math.random()*100+155));
 }
 public void sierpinski(int sides, float x, float y, float siz) {
-  if (siz <= height/4/sides/sides) {
+  if (siz < height/4/sides/sides) {
     beginShape();
     for (int i = 0; i < sides; i++) {
       vertex((float)(x+siz*Math.sin(i*TWO_PI/sides)), (float)(y+siz*Math.cos(i*TWO_PI/sides)));
@@ -54,8 +54,10 @@ public void sierpinski(int sides, float x, float y, float siz) {
     endShape();
   } else {
     float adjustment = 1;
-    if (sides == 5 || sides == 4) {
+    if (sides == 4) {
       adjustment = 0.75;
+    }else if(sides == 5){
+      adjustment = 0.85;
     }
     for (int i = 0; i < sides; i++) {
       if (sides == 3) {
