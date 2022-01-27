@@ -1,5 +1,5 @@
 float rot = 0;
-int s = (int)(Math.random()*5+3);
+int s = (int)(Math.random()*4+3);
 int c = color((int)(Math.random()*50+100), (int)(Math.random()*50+100), (int)(Math.random()*50+100));
 public void setup() {
   size(800, 800);
@@ -38,9 +38,9 @@ public void draw() {
   rot+= 0.005;
 }
 public void mouseClicked() {
-  int temp = (int)(Math.random()*5+3);
+  int temp = (int)(Math.random()*4+3);
   while(temp == s){
-    temp = (int)(Math.random()*5+3);
+    temp = (int)(Math.random()*4+3);
   }
   s = temp;
   c = color((int)(Math.random()*100+155), (int)(Math.random()*100+155), (int)(Math.random()*100+155));
