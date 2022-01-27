@@ -57,7 +57,7 @@ public void sierpinski(int sides, float x, float y, float siz) {
     if (sides == 4) {
       adjustment = 0.75;
     }else if(sides == 5){
-      adjustment = 0.85;
+      adjustment = 0.95;
     }
     for (int i = 0; i < sides; i++) {
       if (sides == 3) {
